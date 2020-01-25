@@ -1,6 +1,7 @@
 import React from "react";
 import Players from "./Players";
 import axios from "axios";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 class PlayersCards extends React.Component {
 
@@ -21,7 +22,7 @@ class PlayersCards extends React.Component {
 
     render() {
         return (
-            <div>
+            <div id="players-cards">
                 {this.state.players.map(card => (
                     <Players 
                       key={card.id}
