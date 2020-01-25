@@ -12,7 +12,7 @@ class PlayersCards extends React.Component {
         axios.get("http://localhost:5000/api/players")
             .then(response => {
                 console.log(response);
-                this.setState({ ...this.state, players: response })
+                this.setState({ ...this.state, players: response.data })
             })
             .catch(err => {
                 console.log(err)
@@ -27,7 +27,7 @@ class PlayersCards extends React.Component {
                       key={card.id}
                       name={card.name}
                       country={card.country}
-                      searchers={card.searches}
+                      searches={card.searches}
                       id={card.id}
                     />
                 ))}
