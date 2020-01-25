@@ -13,7 +13,7 @@ const Header = () => {
             <h1>Women's World Cup Players</h1>
             <h2>ranked by search interest from Google Trends</h2>
             <div className="dark-mode__toggle">
-                <button id="button" 
+                <button id="button" data-testid="button" 
                   onClick={toggleMode}
                   className={darkMode ? 'toggle toggled' : 'toggle'}> 
                 Change Mode</button>

@@ -9,8 +9,12 @@ it("renders without crashing", () => {
   render (<Header />, <PlayersCards />, <App />);
 });
 
-it("does the button render", () => {
+it("does the header's title render", () => {
   const { findByText } = render(<Header />);
   findByText(/Women's World Cup Players/i);
 });
 
+it("does the mode button render", () => {
+  const { getByTestId } = render(<Header />);
+  getByTestId("button");
+});
